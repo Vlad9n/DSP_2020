@@ -26,7 +26,7 @@ def rangefinder():
     signal = np.exp(-1/2 * (t / sigma) ** 2)
     plt.plot(t, signal)
     plt.show()
-    cor = np.correlate(signal, recv_signal, mode='same')
+    cor = np.correlate(recv_signal, signal, mode='same')
     argmax = np.abs(cor).argmax()
     #print(np.abs(cor).max(), argmax)
     #plt.plot(t, signal)
